@@ -38,7 +38,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/pranay041/weather-app.git
+git clone [https://github.com/pranay041/weather-app.git](https://github.com/pranay041/weatherapp.git)
 
 Open the Project:
 
