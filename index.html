@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the document type as HTML5 -->
+    <!-- Sets the language of the document to English -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links the external CSS file for styling the page -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Sets the title of the webpage displayed in the browser tab -->
+    <title>Weather App</title>
+</head>
+<body>
+    <!-- Main container holding all the content for the weather card -->
+    <div class="card">
+      
+        <!-- Background video element that plays automatically, loops continuously, and is muted -->
+        <video id="background-video" autoplay loop muted>
+            <!-- Specifies the source of the video file and its format -->
+            <source class="" src="./videos/Drizzle.mp4" type="video/mp4">
+        </video>
+
+        <!-- Search bar section where users can input the city name to get weather details -->
+        <div class="search">
+            <!-- Text input field for entering the city name; spellcheck is disabled -->
+            <input type="text" placeholder="Enter city name" spellcheck="false" id="city-input">
+            <!-- Search button with an image icon; clicking triggers the search functionality -->
+            <button id="search-button"><img src="./images/search.png" alt=""></button>
+        </div>
+
+        <!-- Error message container that displays when an invalid city name is entered -->
+        <div class="error">
+            <!-- Text displaying the error message -->
+            <p>Invalid City Name</p>
+        </div>
+
+        <!-- Container for displaying the weather information -->
+        <div class="weather">
+            <!-- Weather icon representing the current weather condition (e.g., rain, sun) -->
+            <img src="./images/rain.png" class="weather-icon">
+            <!-- Displays the current temperature in degrees Celsius -->
+            <h1 class="temp">22°c</h1>
+            <!-- Displays the name of the city for which the weather is being shown -->
+            <h2 class="city">New York</h2>
+
+            <!-- Additional details about the weather, such as humidity and wind speed -->
+            <div class="details">
+                <!-- First column showing the humidity information -->
+                <div class="col">
+                    <!-- Icon representing humidity -->
+                    <img src="./images/humidity.png">
+                    <!-- Displays the humidity percentage and label -->
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <!-- Second column showing the wind speed information -->
+                <div class="col">
+                    <!-- Icon representing wind speed -->
+                    <img src="./images/wind.png">
+                    <!-- Displays the wind speed value and label -->
+                    <div>
+                        <p class="wind">15 Km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- Links the external JavaScript file that handles the app's functionality -->
+    <script src="./index.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* General reset for margin and padding, setting a default font and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body background color */
+body {
+    background: #222; /* Dark background to contrast the card */
+}
+
+/* Main container for the weather card */
+.card {
+    width: 90%; /* Responsive width, will take 90% of the screen width */
+    max-width: 470px; /* Maximum width to ensure the card doesn't get too wide */
+    background: linear-gradient(135deg, #00feba, #5b548a); /* Gradient background for the card */
+    color: #fff; /* Text color */
+    margin: 50px auto 0; /* Center the card with top margin */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px 15px; /* Padding inside the card */
+    text-align: center; /* Center text alignment */
+}
+
+/* Search bar container */
+.search {
+    width: 100%; /* Full width of the card */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; /* Stack input and button vertically on smaller screens */
+}
+
+/* Search input field styling */
+.search input {
+    border: 0; /* Remove border */
+    outline: 0; /* Remove outline */
+    background: #ebfffc; /* Light background for the input field */
+    color: #555; /* Darker text color */
+    padding: 10px 25px; /* Padding inside the input field */
+    height: 50px; /* Fixed height for the input */
+    border-radius: 30px; /* Rounded corners for input */
+    margin-bottom: 16px; /* Margin between input and button */
+    font-size: 16px; /* Font size for the input text */
+    width: 100%; /* Full width for smaller screens */
+    max-width: none; /* Override any max-width to ensure full width */
+}
+
+/* Search button styling */
+.search button {
+    border: 0; /* Remove border */
+    outline: 0; /* Remove outline */
+    background: #ebfffc; /* Light background matching the input */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Search button image icon */
+.search button img {
+    width: 16px; /* Size of the search icon inside the button */
+}
+
+/* Weather icon styling */
+.weather-icon {
+    width: 140px; /* Size of the weather icon */
+    margin-top: 20px; /* Margin above the icon */
+}
+
+/* Temperature display styling */
+.weather h1 {
+    font-size: 50px; /* Font size for temperature */
+    font-weight: 500; /* Medium weight */
+    margin-top: -10px; /* Negative margin to adjust spacing */
+}
+
+/* Container for weather details like humidity and wind */
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Padding on the sides */
+    margin-top: 30px; /* Margin above the details section */
+    flex-direction: column; /* Stack details vertically on smaller screens */
+}
+
+/* Individual detail column (humidity, wind) */
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left; /* Left-align text within each column */
+    margin-bottom: 10px; /* Space between columns on smaller screens */
+}
+
+/* Icons within the detail columns (humidity, wind) */
+.col img {
+    width: 30px; /* Icon size */
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+/* Humidity and wind text styling */
+.humidity, .wind {
+    font-size: 20px; /* Font size for humidity and wind data */
+    margin-top: -6px; /* Adjust vertical alignment */
+}
+
+/* Media query for screens 600px and larger */
+@media (min-width: 600px) {
+    /* Arrange search input and button in a row for larger screens */
+    .search {
+        flex-direction: row; 
+    }
+
+    /* Adjust input styling for larger screens */
+    .search input {
+        margin-right: 16px; /* Margin between input and button */
+        margin-bottom: 0; /* Remove bottom margin */
+        height: 60px; /* Taller input field */
+        font-size: 18px; /* Larger font size */
+    }
+
+    /* Adjust button size for larger screens */
+    .search button {
+        width: 60px; /* Larger button width */
+        height: 60px; /* Larger button height */
+    }
+
+    /* Adjust weather icon size for larger screens */
+    .weather-icon {
+        width: 170px; /* Larger icon size */
+        margin-top: 30px; /* More space above icon */
+    }
+
+    /* Increase font size of the temperature display */
+    .weather h1 {
+        font-size: 80px; /* Larger temperature font size */
+    }
+
+    /* Arrange details in a row for larger screens */
+    .details {
+        flex-direction: row; /* Horizontal layout for details */
+        padding: 0 20px; /* Increase side padding */
+    }
+
+    /* Remove bottom margin between detail columns */
+    .col {
+        margin-bottom: 0;
+    }
+
+    /* Increase font size for humidity and wind data */
+    .humidity, .wind {
+        font-size: 28px;
+    }
+}
+
+/* Styling for the error message */
+.error {
+    text-align: left; /* Left-align error message */
+    margin-left: 10px; /* Left margin for positioning */
+    font-size: 14px; /* Font size of the error message */
+    margin-top: 10px; /* Top margin for spacing */
+    display: none; /* Initially hidden, will display on error */
+}
+
+/* Styling for the background video */
+#background-video {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensure video covers the entire background */
+    position: fixed; /* Fixed position to stay in the background */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    top: 0; /* Align to the top edge */
+    bottom: 0; /* Align to the bottom edge */
+    z-index: -1; /* Position behind all other content */
+}     
