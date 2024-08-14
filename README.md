@@ -11,6 +11,8 @@ Dynamic Weather Display: The app displays weather icons and background videos th
 
 ##How to Use
 
+Check out the live demo: [weattherApp demo](https://pranay041.github.io/weatherapp/)
+
 Open the Website:
 
 Launch the Weather App in your preferred web browser by opening the index.html file.
